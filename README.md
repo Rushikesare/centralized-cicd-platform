@@ -1,30 +1,32 @@
 # Centralized CI/CD Platform
 
-A centralized CI/CD platform that automates application build, containerization, deployment, and health verification using Jenkins, GitHub, Docker, and AWS EC2.
+A centralized CI/CD platform that automates application validation, Docker image building, deployment, and health verification using GitHub Actions, Jenkins, Docker, and AWS EC2.
 
 ## Architecture
 
-GitHub → GitHub Webhook → Jenkins → Docker → AWS EC2 → Health Check
-
-## Technologies Used
-
-- AWS EC2
-- Ubuntu
-- Git
-- GitHub
-- GitHub Webhooks
-- Jenkins
-- Docker
-- Nginx
-- Bash
-- HTML
-
-## Project Structure
-
 ```text
-centralized-cicd-platform/
-├── app/
-│   └── index.html
-├── Dockerfile
-├── Jenkinsfile
-└── README.md
+Developer
+    |
+    | git push
+    v
+GitHub
+    |
+    +--------------------+
+    |                    |
+    v                    v
+GitHub Actions        GitHub Webhook
+    |                    |
+    | CI                 v
+    |                 Jenkins
+    |                    |
+    |                    v
+    |                 Docker
+    |                    |
+    |                    v
+    |                 AWS EC2
+    |                    |
+    |                    v
+    |               Health Check
+    |
+    v
+Docker Image Build
