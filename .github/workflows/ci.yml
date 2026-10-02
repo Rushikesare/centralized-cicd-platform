@@ -1,0 +1,38 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Validate project files
+        run: |
+          test -f Dockerfile
+          test -f Jenkinsfile
+          test -f app/index.html
+          echo "Required project files are present."
+
+      - name: Validate HTML
+        run: |
+          grep -q "<html" app/index.html
+          grep -q "</html>" app/index.html
+          echo "HTML validation passed."
+
+      - name: Build Docker image
+        run: |
+          docker build -t centralized-cicd:test .
+
+      - name: CI completed
+        run: echo "GitHub Actions CI completed successfully."
+
