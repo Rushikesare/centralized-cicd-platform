@@ -38,6 +38,23 @@ A centralized CI/CD platform that automates application validation, Docker image
 - Infrastructure hosted on Ubuntu Linux
 - Version-controlled source code using Git and GitHub
 
+## 📁 Project Structure
+
+```text
+centralized-cicd-platform/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── app/
+│   └── index.html
+├── docs/
+│   ├── architecture.png
+│   ├── github-actions.png
+│   └── jenkins-cd-proof.png
+├── Dockerfile
+├── Jenkinsfile
+└── README.md
+
 ## Architecture
 
 ![Centralized CI/CD Platform Architecture](docs/architecture.png)
