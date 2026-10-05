@@ -13,6 +13,19 @@ A centralized CI/CD platform that automates application validation, Docker image
 - **Operating System:** Ubuntu Linux
 - **Automation:** GitHub Webhooks
 
+## 🔄 CI/CD Workflow
+
+1. Developer pushes code to the GitHub repository.
+2. GitHub Actions automatically validates the project.
+3. GitHub Actions builds the Docker image.
+4. GitHub Webhook triggers the Jenkins pipeline.
+5. Jenkins pulls the latest source code.
+6. Jenkins validates the application files.
+7. Jenkins builds and tags the Docker image.
+8. Jenkins deploys the application container on AWS EC2.
+9. Jenkins performs an application health check.
+10. Successful deployment is confirmed.
+
 ## Architecture
 
 ![Centralized CI/CD Platform Architecture](docs/architecture.png)
