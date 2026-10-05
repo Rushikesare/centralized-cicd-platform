@@ -2,6 +2,17 @@
 
 A centralized CI/CD platform that automates application validation, Docker image building, deployment, and health verification using GitHub Actions, Jenkins, Docker, and AWS EC2.
 
+## 🛠️ Technologies Used
+
+- **Cloud:** AWS EC2
+- **CI:** GitHub Actions
+- **CD:** Jenkins
+- **Containerization:** Docker
+- **Web Server:** Nginx
+- **Version Control:** Git & GitHub
+- **Operating System:** Ubuntu Linux
+- **Automation:** GitHub Webhooks
+
 ## Architecture
 
 ![Centralized CI/CD Platform Architecture](docs/architecture.png)
