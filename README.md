@@ -4,6 +4,8 @@ A centralized CI/CD platform that automates application validation, Docker image
 
 ## Architecture
 
+![Centralized CI/CD Platform Architecture](docs/architecture.png)
+
 ```text
 Developer
     |
