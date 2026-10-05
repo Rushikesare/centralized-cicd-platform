@@ -37,19 +37,15 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
-            steps {
-                echo 'Deploying application container...'
-                sh '''
-                    docker rm -f ${CONTAINER_NAME} 2>/dev/null || true
-
-                    docker run -d \
-                        --name ${CONTAINER_NAME} \
-                        -p ${PORT}:80 \
-                        ${IMAGE_NAME}:${BUILD_NUMBER}
-                '''
-            }
-        }
+     	stage('Deploy') {
+    	   steps {
+            echo 'Deploying application container...'
+            sh '''
+                docker rm -f centralized-cicd || true
+                docker run -d --name centralized-cicd -p 80:80 centralized-cicd:${BUILD_NUMBER}
+            '''
+           }
+         }
 
         stage('Health Check') {
             steps {
