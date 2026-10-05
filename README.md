@@ -31,7 +31,9 @@ The Jenkins pipeline performs the following steps:
 
 ### Jenkins Pipeline Execution
 
-![Jenkins CD Pipeline](docs/jenkins-cd-proof.png)
+<p align="center">
+  <img src="docs/jenkins-cd-proof.png" alt="Jenkins CD Pipeline" width="850">
+</p>
 
 The pipeline completed successfully with `Finished: SUCCESS`.
 
