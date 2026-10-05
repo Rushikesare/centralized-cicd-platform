@@ -26,6 +26,18 @@ A centralized CI/CD platform that automates application validation, Docker image
 9. Jenkins performs an application health check.
 10. Successful deployment is confirmed.
 
+## 🚀 Key Features
+
+- Automated CI pipeline using GitHub Actions
+- Automated CD pipeline using Jenkins
+- GitHub Webhook integration for automatic deployments
+- Docker-based application containerization
+- Application deployment on AWS EC2
+- Automated Docker image build and tagging
+- Application health check after deployment
+- Infrastructure hosted on Ubuntu Linux
+- Version-controlled source code using Git and GitHub
+
 ## Architecture
 
 ![Centralized CI/CD Platform Architecture](docs/architecture.png)
