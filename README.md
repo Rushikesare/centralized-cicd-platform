@@ -55,6 +55,29 @@ centralized-cicd-platform/
 ├── Jenkinsfile
 └── README.md
 
+## 🚀 Deployment & Verification
+
+The application is deployed automatically on an AWS EC2 Ubuntu server through the Jenkins CD pipeline.
+
+### Deployment Process
+
+- Jenkins receives the GitHub Webhook notification.
+- Jenkins pulls the latest source code.
+- Docker image is built automatically.
+- The previous application container is removed.
+- A new Docker container is started.
+- Nginx serves the application on port 80.
+- Jenkins performs a health check to verify the deployment.
+
+### Deployment Result
+
+The deployed application is accessible through the EC2 public IP:
+
+**http://3.25.90.198**
+
+The successful deployment is verified through the Jenkins pipeline console and the live application.
+
+
 ## Architecture
 
 ![Centralized CI/CD Platform Architecture](docs/architecture.png)
