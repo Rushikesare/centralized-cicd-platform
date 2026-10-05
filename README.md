@@ -6,6 +6,12 @@ A centralized CI/CD platform that automates application validation, Docker image
 
 ![Centralized CI/CD Platform Architecture](docs/architecture.png)
 
+### GitHub Actions CI
+
+The GitHub Actions workflow validates project files, validates HTML, and builds the Docker image on every push to the `main` branch.
+
+![GitHub Actions CI](docs/github-actions.png)
+
 ```text
 Developer
     |
